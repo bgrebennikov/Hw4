@@ -22,5 +22,14 @@ public class Main {
             System.out.println("На улице холодно, нужно надеть шапку");
         }
 
+        // Task 3
+        int driverSpeed = 65;
+
+        if (driverSpeed > 60) {
+            System.out.printf("\nЕсли скорость %s км/ч, придется заплатить штраф", driverSpeed);
+        } else {
+            System.out.printf("\nЕсли скорость %s км/ч, можно ездить спокойно\n", driverSpeed);
+        }
+
     }
 }
