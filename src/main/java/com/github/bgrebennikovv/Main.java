@@ -69,5 +69,31 @@ public class Main {
             System.out.printf("\n\nЕсли возраст ребенка равен %s, то ему можно кататься на аттракционе без сопровождения взрослого.", childAge);
         }
 
+        // Task 6
+        int trainCapacity = 102;
+        int sittingPlaces = 60;
+        int standingPlaces = trainCapacity - sittingPlaces;
+
+        int passengersCount = 40;
+
+        System.out.printf("""
+                \n
+                Вместимость поезда: %s чел.
+                Сидячих мест: %s, Стоячих: %s.
+                Если в вагоне %s пассажиров, то:
+                """, trainCapacity, sittingPlaces, standingPlaces, passengersCount);
+
+        if(passengersCount >= trainCapacity){
+            System.out.println("Вагон полностью забит. (Нет мест)");
+        } else if (passengersCount < sittingPlaces) {
+            System.out.printf("""
+                    Есть %s сидячих мест
+                    """, sittingPlaces-passengersCount);
+        } else {
+            System.out.printf("""
+                    Есть %s стоячих мест
+                    """, trainCapacity-passengersCount);
+        }
+
     }
 }
