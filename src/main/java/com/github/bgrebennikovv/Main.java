@@ -48,8 +48,7 @@ public class Main {
                     
                     Если возраст человека равен: %s, то ему нужно ходить в университет.
                     """, humanAge);
-        }
-        else if (humanAge > 24) {
+        } else if (humanAge > 24) {
             System.out.printf("""
                     
                     Если возраст человека равен: %s, то ему пора ходить на работу.
@@ -61,11 +60,9 @@ public class Main {
         int childAge = 6;
         if (childAge <= 5) {
             System.out.printf("\n\nЕсли возраст ребенка равен %s, то ему нельзя кататься на аттракционе.", childAge);
-        }
-        else if (childAge >= 5 && childAge <= 14) {
+        } else if (childAge >= 5 && childAge <= 14) {
             System.out.printf("\n\nЕсли возраст ребенка равен %s, то ему можно кататься на аттракционе в сопровождении взрослого.", childAge);
-        }
-        else {
+        } else {
             System.out.printf("\n\nЕсли возраст ребенка равен %s, то ему можно кататься на аттракционе без сопровождения взрослого.", childAge);
         }
 
@@ -83,17 +80,40 @@ public class Main {
                 Если в вагоне %s пассажиров, то:
                 """, trainCapacity, sittingPlaces, standingPlaces, passengersCount);
 
-        if(passengersCount >= trainCapacity){
+        if (passengersCount >= trainCapacity) {
             System.out.println("Вагон полностью забит. (Нет мест)");
         } else if (passengersCount < sittingPlaces) {
             System.out.printf("""
                     Есть %s сидячих мест
-                    """, sittingPlaces-passengersCount);
+                    """, sittingPlaces - passengersCount);
         } else {
             System.out.printf("""
                     Есть %s стоячих мест
-                    """, trainCapacity-passengersCount);
+                    """, trainCapacity - passengersCount);
         }
+
+        // Task 7
+
+        int one = 5;
+        int two = 7;
+        int three = 1;
+
+        System.out.printf("""
+                
+                Даны числа: %s, %s, %s
+                """, one, two, three);
+
+        int max;
+
+        if (one >= two && one >= three) {
+            max = one;
+        } else if (two >= one && two >= three) {
+            max = two;
+        } else {
+            max = three;
+        }
+
+        System.out.printf("Найбольшее число: %s", max);
 
     }
 }
