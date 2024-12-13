@@ -56,5 +56,18 @@ public class Main {
                     """, humanAge);
         }
 
+        // Task 5
+
+        int childAge = 6;
+        if (childAge <= 5) {
+            System.out.printf("\n\nЕсли возраст ребенка равен %s, то ему нельзя кататься на аттракционе.", childAge);
+        }
+        else if (childAge >= 5 && childAge <= 14) {
+            System.out.printf("\n\nЕсли возраст ребенка равен %s, то ему можно кататься на аттракционе в сопровождении взрослого.", childAge);
+        }
+        else {
+            System.out.printf("\n\nЕсли возраст ребенка равен %s, то ему можно кататься на аттракционе без сопровождения взрослого.", childAge);
+        }
+
     }
 }
